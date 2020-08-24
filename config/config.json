@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "letmein55",
+    "password": "groceteria2020",
     "database": "groceteria",
     "host": "127.0.0.1",
     "dialect": "mysql"
