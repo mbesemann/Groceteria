@@ -50,4 +50,30 @@ module.exports = function(app) {
       });
     }
   });
+
+  app.post("/api/categories", (req, res) => {
+    db.Category.create(req.body).then(dbPost => {
+      res.json(dbPost);
+    });
+  });
+
+  app.get("/api/categories", (req, res) => {
+    db.Category.findAll({}).then(categories => {
+      res.json(categories);
+    });
+  });
+
+  app.post("/api/products", (req, res) => {
+    db.Product.create(req.body).then(dbPost => {
+      res.json(dbPost);
+    });
+  });
+
+  app.get("/api/products", (req, res) => {
+    db.Product.findAll({
+      include: db.Category
+    }).then(products => {
+      res.json(products);
+    });
+  });
 };
