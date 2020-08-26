@@ -292,7 +292,18 @@ hr.dotted {
 }
 
 /* map box */
+#map:root {
+  --light-gray: #DADCE0;
+  --blue-gray: #f2f5f8;
+  --light-blue: #1B9CE2;
+}
 
+
+#map {
+  background-color: var(--blue-gray);
+  margin: 0;
+height: 100vh;
+}
 
 
 
