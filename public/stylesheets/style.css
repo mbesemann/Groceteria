@@ -156,7 +156,7 @@ overflow:hidden;
 
 .button-container a {
   transition: all 1s ease-out;
-  /*background: rgba(88, 88, 88, 0.7);*/
+  background: rgba(241, 241, 237, 0.7);
   border-radius:50%; vertical-align:middle;
   padding:5%; 
   color: 183379;
@@ -167,7 +167,7 @@ overflow:hidden;
   left:0;
   right:0;
   bottom:0;
-  width:90%;
+  width:100%;
   display:inline-block;
   text-decoration: none;
   text-transform:uppercase;
@@ -292,26 +292,7 @@ hr.dotted {
 }
 
 /* map box */
- .container{
-   position: relative;
-   width: 1200px;
-   height: 300px;
-   margin: 240px auto;
-   
- }
 
- .container .box{
-   position: relative;
-   width: calc(700px - 30px);
-   height: calc(500px - 30px);
-   background: #ff0;
-   float: left;
-   margin: 15px;
-   box-sizing: border-box;
-   overflow: hidden;
-   border-radius: 10px;
-
- }
 
 
 
