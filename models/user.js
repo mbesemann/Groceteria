@@ -31,5 +31,15 @@ module.exports = function(sequelize, DataTypes) {
       null
     );
   });
+
+  User.associate = function(models) {
+    User.hasMany(models.GroceryList, {
+      include: models.GroceryList
+    });
+    User.hasOne(models.Cart, {
+      include: models.Cart
+    });
+  };
+
   return User;
 };
