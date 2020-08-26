@@ -6,6 +6,7 @@ $(document).ready(() => {
   });
 });
 
+//MAP
 const initMap = () => {
  
 mapboxgl.accessToken = "pk.eyJ1IjoidXp2b3lhZ2UiLCJhIjoiY2p0c3NsOTNuMTRieDQ0bnNnZmdwcGdqZSJ9.tX1tzc3xzvjwu4e00_l66w";
