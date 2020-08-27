@@ -15,6 +15,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-6 offset-md-3">
+        <h2>Add a Category</h2>
         <form id="category">
           <div class="form-group">
             <label for="name">Name:</label>
@@ -24,8 +25,10 @@
             <input placeholder="Description" type="text" class="form-control" id="categoryDescription">
             <br />
             <button type="submit" class="btn btn-success submit">Submit</button>
+            <span id="categoryStatus"></span>
           </div>
         </form>
+        <h2>Add a Product</h2>
         <form id="product">
           <div class="form-group">
             <label for="name">Name:</label>
@@ -40,11 +43,13 @@
             <label for="productPhotoUrl">Photo URL:</label>
             <input placeholder="Photo URL" type="text" class="form-control" id="productPhotoUrl">
             <br />
-            <label for="productCategoryID">Category ID:</label>
-            <input placeholder="Photo URL" type="text" class="form-control" id="productCategoryID">
-            <br />
-
+            <div class="form-group">
+              <label for="productCategoryID">Select Author:</label>
+              <select class="custom-select" id="productCategoryID">
+              </select>
+            </div>
             <button type="submit" class="btn btn-success submit">Submit</button>
+            <span id="productStatus"></span>
           </div>
         </form>
       </div>

@@ -37,6 +37,6 @@ $(document).ready(() => {
       });
   }
 });
-$('.message a').click(function(){
-  $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
+$(".message a").click(() => {
+  $("form").animate({ height: "toggle", opacity: "toggle" }, "slow");
 });
