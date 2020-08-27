@@ -12,6 +12,13 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.DECIMAL,
       allowNull: false
     },
+    // formattedPrice: {
+    //   type: DataTypes.VIRTUAL,
+    //   get: () => {
+    //     const rawValue = this.get("price");
+    //     return `$${rawValue.toFixed(2)}`;
+    //   }
+    // },
     photoUrl: {
       type: DataTypes.STRING,
       allowNull: false
