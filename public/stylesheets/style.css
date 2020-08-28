@@ -114,6 +114,7 @@ body.members{
   padding-top: 3rem;
   padding-left: 0;
   padding-right: 0;
+  width: 100%;
 }
 
 /*rounded buttons*/
@@ -286,10 +287,6 @@ width: 30.6666%;
 width: 65.3332%;
 }
 
-/*divider */
-hr.dotted {
-  border-top: 3px dotted #ef8900;
-}
 
 /* map box */
 #map:root {
@@ -303,6 +300,84 @@ hr.dotted {
   background-color: var(--blue-gray);
   margin: 0;
 height: 100vh;
+}
+
+/* new map */
+
+.contactmap {
+  border-radius: 25px;
+  border: 2px solid #dbda91;
+  padding: 20px;
+  width: 200px;
+  height: 300px;
+  margin-bottom: 10%;
+}
+.contactmap .grid_8.omega {
+	background-color: #fff;
+	height: 100%;
+	display: block;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+}
+#map_canvas {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+
+.grid_4,
+.grid_8,
+.grid_12 {
+	width:100%;
+}
+
+
+
+.grid_4 { width: 32%; } 
+.grid_8 { width: 66%; } 
+.grid_12 { width: 100%; } 
+
+.grid_4,
+.grid_8,
+.grid_12 {
+	margin: 0 2% 1% 0;
+	float: left;
+	display: block;
+}
+
+.container { 
+  height: 60px;
+  position: relative;
+  border: black; 
+}
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+
+
+
+.contactmap .information span {
+	font-weight: bold;
+}
+.contactmap .grid_8.omega .grid_6 {
+	margin: 40px 0 0 220px;
+}
+.contactmap .grid_8.omega .grid_6 .btn {
+	margin-top: 10px;
+	border: 1px solid rgba(0,0,0,.1);
+	margin-left: 0;
+}
+h2{
+  text-align: center;
+
 }
 
 
