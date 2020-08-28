@@ -1,6 +1,7 @@
 // Requiring our models and passport as we've configured it
 const db = require("../models");
 const passport = require("../config/passport");
+const { sequelize, Op } = require("../models");
 
 module.exports = function(app) {
   // Using the passport.authenticate middleware with our local strategy.
@@ -66,6 +67,14 @@ module.exports = function(app) {
   app.post("/api/products", (req, res) => {
     db.Product.create(req.body).then(dbPost => {
       res.json(dbPost);
+    });
+  });
+
+  app.get("/api/products/:cat", (req, res) => {
+    db.Product.findAll({
+      include: { model: db.Category, where: { name: req.params.cat } }
+    }).then(products => {
+      res.json(products);
     });
   });
 
