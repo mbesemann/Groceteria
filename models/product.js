@@ -9,13 +9,13 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false
     },
     price: {
-      type: DataTypes.DECIMAL,
+      type: DataTypes.DECIMAL(5,2),
       allowNull: false
     },
     // formattedPrice: {
     //   type: DataTypes.VIRTUAL,
-    //   get: () => {
-    //     const rawValue = this.get("price");
+    //   get: function() {
+    //     const rawValue = parseFloat(this.getDataValue("price"));
     //     return `$${rawValue.toFixed(2)}`;
     //   }
     // },
