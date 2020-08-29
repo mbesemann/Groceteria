@@ -10,10 +10,7 @@ $(document).ready(() => {
 const initMap = () => {
   mapboxgl.accessToken =
     "pk.eyJ1IjoidXp2b3lhZ2UiLCJhIjoiY2p0c3NsOTNuMTRieDQ0bnNnZmdwcGdqZSJ9.tX1tzc3xzvjwu4e00_l66w";
-<<<<<<< HEAD
 
-=======
->>>>>>> master
   const map = new mapboxgl.Map({
     container: "map",
     style: "mapbox://styles/mapbox/dark-v10",
@@ -24,10 +21,6 @@ const initMap = () => {
     .setHTML(`<h2>Groceteria Store</h2><p>1980 Ogilvie Rd, Gloucester, ON K1J 9L3
 </p>`);
 
-<<<<<<< HEAD
-  // eslint-disable-next-line no-unused-vars
-=======
->>>>>>> master
   const marker = new mapboxgl.Marker()
     .setLngLat([-75.610474, 45.433556])
     .setPopup(popup)

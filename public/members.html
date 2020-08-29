@@ -22,7 +22,7 @@
 <header>
   <nav class="navbar navbar-expand-md navbar-dark fixed-top text-white" style="background:#408A00">
     
-  <a href="" class="text-white navbar-brand">
+  <a href="" class="text-white navbar-brand" style="font-family: sans-serif; font-weight: bold;">
     <i class="fas fa-store-alt"></i> Groceteria
   </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" 
@@ -33,28 +33,28 @@
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <ul class="navbar-nav mr-auto menu">
         <li class="nav-item active">
-          <a  href="#" class="nav-link">Home</a>
+          <a  href="#" class="nav-link" style="font-family: serif; font-weight: 400;">Home</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#fruit">Fruits</a>
+        <li class="nav-item active">
+          <a  href="#" class="nav-link" style="font-family: serif; font-weight: 400;">Fruits</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#vegetables">Vegetables</a>
+        <li class="nav-item active">
+          <a class="nav-link" href="#vegetables" style="font-family: serif; font-weight: 400;">Vegetables</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#dairy">Dairy</a>
+        <li class="nav-item active">
+          <a class="nav-link" href="#dairy" style="font-family: serif; font-weight: 400;">Dairy</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#juice">Bakery</a>
+        <li class="nav-item active">
+          <a class="nav-link" href="#juice" style="font-family: serif; font-weight: 400;">Bakery</a>
         </li>
       </ul>
       <form  class="form-inline mt-2 mt-md-0">
-        <a class="text-white nav-link" href="cart.MySQL">
+        <a class="text-white nav-link" href="cart.MySQL" style="font-family: serif; font-weight: 400;">
         <i class="text-warning fas fa-shopping-cart">
           </i>Cart
           <i style="color:yellow" id="cart_n"></i>
         </a>
-        <a  style="cursor:pointer" class="nav-link text-white" data-toggle="modal" data-target="#ModalCenter">
+        <a  style="font-family:serif; font-weight: 400;" class="nav-link text-white" data-toggle="modal" data-target="#ModalCenter">
         <i class="far fa-user"></i> User
         </a>
       </form>
@@ -67,7 +67,7 @@
  
 
 <div class="text-center">
-  <img src="./img/header1.jpg" class="img-fluid" alt="Responsive image">
+  <img src="./img/header01.jpg" class="img-fluid" alt="Responsive image">
 </div>
 <div style="position: relative;">
 <div class="button-images">
@@ -273,6 +273,22 @@
 
           </form>
       </div>
+<!--map box-->
+<div class="content grid_12 contactmap" id="contact-map">
+  <div class="grid_4">
+    <h2 style="font-family: sans-serif;font-weight: bolder;">Find a Store</h2>
+    <p class="text-center" style="font-family: sans-serif; font-weight: bold">Now, it's time to find the nearest store.</p>
+    <p class="text-center" style="font-family: sans-serif; font-weight: bold">Enjoy your grocery shopping!</p>
+    <br>
+    <div class="container">
+      <div class="center">
+        <a class="btn btn-default btn-lg active" href="https://goo.gl/maps/8GlbZ" target="_blank" role="button" style="font-family: sans-serif; font-weight: bold;background-color:#ef8900;">Search</a>
+      </div>
+  </div>
+    <div class="clear"></div>
+  </div>
+  <div class="grid_8 omega">
+    <div id="map"></div>
   </div>
   <label for="subscribe-email"></label>					
   <!-- follow-us and subscription links ends here -->	
