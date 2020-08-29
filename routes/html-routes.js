@@ -38,7 +38,7 @@ module.exports = function(app) {
   app.get("/products/:category", (req, res) => {
     db.Product.findAll({
       raw: true,
-      include: { model: db.Category, where: { name: req.params.category } },
+      include: { model: db.Category, where: { name: req.params.category } }
     }).then(products => {
       res.render("products", { products: products });
     });
