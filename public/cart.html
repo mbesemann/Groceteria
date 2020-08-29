@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./stylesheets/cart.css">
+  <script src="./store.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+  <title>Groceteria</title>
+</head>
+<body>
+  
+<header>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top text-white" style="background:#408a00">
+    
+  <a href="" class="text-white navbar-brand">
+    <i class="fas fa-store-alt"></i> Groceteria
+  </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" 
+    data-target="#navbarCollapse" aria-controls="navbarCollapse" 
+    aria-expanded="false" aria-lebel="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto menu">
+        <li class="nav-item active">
+          <a  href="#" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#fruit">Fruits</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#vegetables">Vegetables</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#dairy">Dairy</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#juice">Juice</a>
+        </li>
+      </ul>
+      <form  class="form-inline mt-2 mt-md-0">
+        <a class="text-white nav-link" href="cart.MySQL">
+        <i class="text-warning fas fa-shopping-cart">
+          </i>Shopping Cart
+          <i style="color:yellow" id="cart_n"></i>
+        </a>
+        <a  style="cursor:pointer" class="nav-link text-white" data-toggle="modal" data-target="#ModalCenter">
+        <i class="far fa-user"></i> Administrator
+        </a>
+      </form>
+    </div>
+  </nav>
+</header>
+
+<main role="main">
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li style="z-index:102" data-target="#myCarousel" data-slide-to="0"
+      class="active" ></li>
+      <li style="z-index:102" data-target="#myCarousel" data-slide-to="1" ></li>
+      <li style="z-index:102" data-target="#myCarousel" data-slide-to="2" ></li>
+      <li style="z-index:102" data-target="#myCarousel" data-slide-to="3"
+      class="active" ></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+      <video src=""></video>
+      </div>
+    </div>
+  </div>
+</main> 
+
+<div class="products-container">
+    <div class="products-header">
+        <h5 class="product-title">PRODUCT</h5>
+        <h5 class="products-title">TITLE</h5>
+        <h5 class="price">PRICE</h5>
+        <h5 class="quantity">QUANTITY</h5>
+        <h5 class="total">TOTAL</h5>
+    </div>
+    <div class="products">
+
+    </div>
+</div>
+<script src="./js/addToCart.js"></script>
+</body>
+</html>
+
