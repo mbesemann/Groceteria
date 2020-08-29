@@ -3,13 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/c32adfdcda.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,700,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <link rel="stylesheet" href="./stylesheets/style.css">
   <link href="stylesheets/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="./stylesheets/footer.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <link href="https://api.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.css" rel="stylesheet" />
+  <link href="https://api.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.css" rel="stylesheet">
+ 
   <title>Groceteria</title>
-  <script src="https://kit.fontawesome.com/c32adfdcda.js" crossorigin="anonymous"></script>
 </head>
 <body>
   
@@ -98,6 +104,175 @@
 </div>
 </div>
 
+<!--PRODUCTS LAYOUT-->
+<div class="products-layout">
+
+<!-- partial:index.partial.html -->
+<br>
+<section class="product">
+	<div class="product__photo">
+		<div class="photo-container">
+			<div class="photo-main">
+				<div class="controls">
+					<i class="material-icons">share</i>
+					<i class="material-icons">favorite_border</i>
+				</div>
+				<img src="./img/products/pineapple.png" alt="green apple slice">
+			</div>
+			<div class="photo-album">
+				<ul>
+					<li><img src="./img/products/pngguru.com (1).png" alt="green apple"></li>
+					<li><img src="./img/products/pngguru.com.png" alt="half apple"></li>
+          <li><img src="./img/products/pngguru.com (2).png" alt="green apple"></li>
+					<li><img src="./img/products/pngguru.com (3).png" alt="half apple"></li>				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="product__info">
+		<div class="title">
+			<h1>Delicious Bananas</h1>
+			<span>weight: 3lb</span>
+		</div>
+		<div class="price">
+			CAD$ <span>2.99</span>
+		</div>
+	
+		<div class="description">
+			<h3>BENEFITS</h3>
+			<ul>
+				<li>Apples are nutricious</li>
+				<li>Apples may be good for weight loss</li>
+				<li>Apples may be good for bone health</li>
+				<li>They're linked to a lowest risk of diabetes</li>
+			</ul>
+		</div>
+		<div class="cart">
+      <a href="cart.html">
+    <button class="buy--btn">ADD TO CART</button>
+  </a>
+</div>
+	</div>
+</section>
+<br>
+<br>
+
+<!--footer start from here-->
+<footer>
+  <div class="container">		
+      <div class="row">
+          
+          <!-- about us starts from here -->
+          <div class="col-md-3">
+              <div class="row"><h3>Groceteria Project</h3></div>
+              <div class="row">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus doloremque fuga perspiciatis voluptatum. Corporis incidunt illum sit molestias 
+                  optio facilis, eaque quis in quasi dolores provident voluptate!
+                  <p><i class="fa fa-map-pin"></i>Donnie Zahra Mattias Groceteria</p>
+              </div>
+              
+          </div>
+          <!-- about us ends here -->
+
+  <!-- contact us form starts from here -->
+  <script src="./js/footer.js"></script>
+  <div class="col-md-3 col-md-offset-1">
+      <div class="row"><h3>Contact Us</h3></div>
+      
+      <div class="row">
+          <form id="form-contact-us">
+              <div class="row">
+
+                  <div class="col-md-12 inp-row-margin">
+                      <div class="row">
+                          <input type="text" name="name" id="contact-name" class="form-control" placeholder="Full Name" />
+                      </div>
+                  </div>
+
+                  <div class="col-md-12 inp-row-margin">
+                      <div class="row">
+                          <input type="text" name="email" id="contact-email" class="form-control" placeholder="Email Id" />
+                      </div>
+                  </div>
+
+                  <div class="col-md-12 inp-row-margin">
+                      <div class="row">
+                          <input type="text" name="mobile" id="contact-mobile" class="form-control" placeholder="Contact Number" maxlength="10" onkeypress="return event.charCode >= 48 && event.charCode <= 57" />
+                      </div>
+                  </div>
+
+                  <div class="col-md-12 inp-row-margin">
+                      <div class="row">
+                          <textarea name="description" class="form-control" id="contact-description" placeholder="Description"></textarea>
+                      </div>
+                  </div>
+
+                  <div class="col-md-12 inp-row-margin">
+                      <div class="row">
+                          <div class="col-md-3" style="padding-left: 0;">
+                              <input type="button" id="btn-send" class="btn btn-default btn-full" value="Send" />
+                          </div>
+
+                          <!-- alert notification -->
+                          <div class="col-md-9" style="padding-left: 0;">
+                              <div id="error-contact" class="alert error hidden">
+                                      <i class="fa fa-close error"></i>
+                                      <strong id="error-contact-message"></strong>
+                              </div>
+                              <div id="success-contact" class="alert success hidden">
+                                      <i class="fa fa-check success"></i>
+                                      <strong>Message sent.</strong>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
+              </div>
+          </form>
+      </div>
+  </div>
+
+  <label for="contact-name"></label>
+  <label for="contact-email"></label>
+  <label for="contact-mobile"></label>
+  <label for="contact-description"></label>
+  <!-- contact us form ends here -->
+
+  <!-- follow-us and subscription links starts from here -->
+  <div class="col-md-3 col-md-offset-1">
+      <div class="row"><h3>Follow Us</h3></div>
+      <div class="row">
+          <div data-href="https://github.com/mbesemann/Groceteria" data-tabs="repository" data-height="300" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+              <blockquote cite="https://github.com/mbesemann/Groceteria">
+                  <i class="fa fa-github"></i>
+                  <a href="https://github.com/mbesemann/Groceteria" target="_blank">GitHub</a>
+              </blockquote>
+          </div>
+      </div>
+
+      <br/>
+      <script src="./js/footer.js"></script>
+      <div class="row"><h3>Subscribe</h3></div>
+      <div class="row">
+          <form method="post" id="form-subscribe">
+              <input type="text" name="email" id="subscribe-email" class="form-control" placeholder="Emai Id" />
+              <input type="button" id="btn-subscribe" class="btn btn-default" value="Subscribe" />
+
+              <!-- alert notification -->
+              <div class="row inp-row-margin">
+                  <div class="col-md-12">
+                      <div id="error-subscribe" class="alert error hidden">
+                      <i class="fa fa-close error"></i>
+                      <strong id="error-subscribe-message"></strong>
+                      </div>
+                      <div id="success-subscribe" class="alert success hidden">
+                      <i class="fa fa-check success"></i>
+                      <strong>You have successfully subscribed for our notifications.</strong>
+                      </div>
+                  </div>
+              </div>
+
+          </form>
+      </div>
 <!--map box-->
 <div class="content grid_12 contactmap" id="contact-map">
   <div class="grid_4">
@@ -115,17 +290,28 @@
   <div class="grid_8 omega">
     <div id="map"></div>
   </div>
+  <label for="subscribe-email"></label>					
+  <!-- follow-us and subscription links ends here -->	
+
+</div>		
 </div>
+</footer>
+<!--footer start from here-->
 
-
+<script>
+function logout() {
+document.getElementById("form-logout").submit();
+}
+</script>
+<form method="post" action="/user/logout" id="form-logout"></form>
   
-
+<script src="./js/addToCart.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript" src="js/members.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-
+<script src="./js/addToCart.js"></script>
 </body>
 
 </html>

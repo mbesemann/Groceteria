@@ -1,8 +1,115 @@
-<h1>Products</h1>
-<ul>
-  {{#each products}}
-      {{> products/product-block}}
-  {{/each}}
-</ul>
 
-</ul>
+ <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/c32adfdcda.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,700,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <link rel="stylesheet" href="./stylesheets/style.css">
+  <link href="stylesheets/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="./stylesheets/footer.css">
+  <link rel="stylesheet" href="./stylesheets/carousel.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link href="https://api.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.css" rel="stylesheet">
+
+<header>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top text-white" style="background:#408A00">
+    
+  <a href="" class="text-white navbar-brand">
+    <i class="fas fa-store-alt"></i> Groceteria
+  </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" 
+    data-target="#navbarCollapse" aria-controls="navbarCollapse" 
+    aria-expanded="false" aria-lebel="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto menu">
+        <li class="nav-item active">
+          <a  href="#" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#fruit">Fruits</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#vegetables">Vegetables</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#dairy">Dairy</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#juice">Bakery</a>
+        </li>
+      </ul>
+      <form  class="form-inline mt-2 mt-md-0">
+        <a class="text-white nav-link" href="cart.MySQL">
+        <i class="text-warning fas fa-shopping-cart">
+          </i>Cart
+          <i style="color:yellow" id="cart_n"></i>
+        </a>
+        <a  style="cursor:pointer" class="nav-link text-white" data-toggle="modal" data-target="#ModalCenter">
+        <i class="far fa-user"></i> User
+        </a>
+      </form>
+    </div>
+  </nav>
+</header>
+ 
+<br>
+<div class="products-layout">
+<br>
+<!-- partial:index.partial.html -->
+{{#each products}}
+<section class="product">
+	<div class="product__photo">
+		<div class="photo-container">
+			<div class="photo-main">
+				<div class="controls">
+					<i class="material-icons">share</i>
+					<i class="material-icons">favorite_border</i>
+				</div>
+				<img src="{{photoUrl}}" alt="{{name}}">
+			</div>
+			
+		</div>
+	</div>
+	<div class="product__info">
+		<div class="title">
+			<h1>{{name}}</h1>
+			</div>
+		<div class="price">
+			CAD$ <span>{{price}}</span>
+		</div>
+	
+		<div class="description">
+			<h3>BENEFITS</h3>
+			<ul>
+				<li>{{name}} are nutricious</li>
+				<li>{{name}} may be good for weight loss</li>
+				<li>{{name}} may be good for bone health</li>
+				<li>They're linked to a lowest risk of diabetes</li>
+			</ul>
+		</div>
+		<div class="cart">
+      <a href="cart.html">
+    <button class="buy--btn">ADD TO CART</button>
+  </a>
+</div>
+	</div>
+</section>
+<br>
+ {{/each}}
+<br>
+
+<!--END PRODUCTS LAYOUT-->
+
+<!--divider-->
+<hr class="dotted">
+
+<script src="./js/addToCart.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/members.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<script src="./js/addToCart.js"></script>
