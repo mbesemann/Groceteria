@@ -1,6 +1,7 @@
 // Requiring our models and passport as we've configured it
 const db = require("../models");
 const passport = require("../config/passport");
+// eslint-disable-next-line no-unused-vars
 const { sequelize, Op } = require("../models");
 
 module.exports = function(app) {
