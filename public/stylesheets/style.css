@@ -380,6 +380,11 @@ h2{
 
 }
 
+/* admin-page-style */
+
+body .admin{
+  background-color:red;
+}
 
 
 

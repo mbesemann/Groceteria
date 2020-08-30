@@ -1,0 +1,35 @@
+body{
+    background-color: #f5eec6;
+    
+}
+.container{
+        position: relative;
+        padding-top: auto;
+		padding-bottom: 20%;
+		box-sizing: content-box;
+		width: 600px;
+		height: 900px;
+		padding: 30px;  
+		border-style: outset;
+		border-top: 3px solid rgba(255,255,255,.5);
+		border-left: 3px solid rgba(255,255,255,.3);
+		border-right: 3px solid rgba(0,0,0,.1);
+		border-bottom: 3px solid rgba(0,0,0,.3);
+
+      
+}
+.header{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.navbar{
+    height: 50px;
+}
+
+.btn{
+    margin: 0 auto;
+    display: block;
+}
+
+
