@@ -25,7 +25,7 @@
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <ul class="navbar-nav mr-auto menu">
         <li class="nav-item active">
-          <a  href="#" class="nav-link">Home</a>
+          <a  href="/products" class="nav-link">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/products/fruit">Fruits</a>
@@ -41,12 +41,13 @@
         </li>
       </ul>
       <form  class="form-inline mt-2 mt-md-0">
-        <a class="text-white nav-link" href="cart.MySQL">
+        <a class="text-white nav-link" href="/cart">
         <i class="text-warning fas fa-shopping-cart">
           </i>Cart
           <i style="color:yellow" id="cart_n"></i>
         </a>
-        <a  style="cursor:pointer" class="nav-link text-white" data-toggle="modal" data-target="#ModalCenter">
+        {{!-- <a href="/user" style="cursor:pointer" class="nav-link text-white" data-toggle="modal" data-target="#ModalCenter"> --}}
+        <a href="/user" class="nav-link text-white">
         <i class="far fa-user"></i> User
         </a>
       </form>
