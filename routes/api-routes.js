@@ -22,8 +22,11 @@ module.exports = function(app) {
   app.post("/api/signup", (req, res) => {
     db.User.create({
       email: req.body.email,
-      password: req.body.password
-    })
+      password: req.body.password,
+      Cart: {}
+    },
+    {include: db.Cart
+      })
       .then(() => {
         res.redirect(307, "/api/login");
       })
@@ -86,4 +89,8 @@ module.exports = function(app) {
       res.json(products);
     });
   });
+
+  // app.put("/api/cart", (req, res) => {
+  //   db.Cart
+  // })
 };
