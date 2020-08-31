@@ -21,6 +21,7 @@ const initMap = () => {
     .setHTML(`<h2>Groceteria Store</h2><p>1980 Ogilvie Rd, Gloucester, ON K1J 9L3
 </p>`);
 
+  // eslint-disable-next-line no-unused-vars
   const marker = new mapboxgl.Marker()
     .setLngLat([-75.610474, 45.433556])
     .setPopup(popup)

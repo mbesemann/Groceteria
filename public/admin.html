@@ -7,57 +7,96 @@
   <!-- Latest compiled and minified CSS & JS -->
   <link href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0/flatly/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css" media="screen" title="no title">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+  <link rel="stylesheet" href="./stylesheets/admin.css">
   <script src="https://code.jquery.com/jquery.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </head>
 
 <body>
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top text-white" style="background:#408A00; margin-top: 0%;margin-bottom: 0%;">
+      
+    <a href="" class="text-white navbar-brand" style="font-family: sans-serif; font-weight: bold;">
+      <i class="fas fa-store-alt"></i> Groceteria
+    </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" 
+      data-target="#navbarCollapse" aria-controls="navbarCollapse" 
+      aria-expanded="false" aria-lebel="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto menu">
+          <li class="nav-item active">
+            
+          </li>
+          
+        </ul>
+        <form  class="form-inline mt-2 mt-md-0">
+                      
+          
+          <a  style="font-family:serif; font-weight: 400;" class="nav-link text-white" data-toggle="modal" data-target="#ModalCenter">
+          <i class="far fa-user"></i> Admin
+          </a>
+        </form>
+      </div>
+    </nav>
+  </header>
+  <br>
+  <br>
+  <br>
+  <br>
   <div class="container">
     <div class="row">
       <div class="col-md-6 offset-md-3">
-        <h2>Add a Category</h2>
+        <h2 style="font-family: serif;font-weight: bold;">Add a Category</h2>
+        <br>
         <form id="category">
           <div class="form-group">
-            <label for="name">Name:</label>
+            <label for="name" style="font-family: serif;">Name:</label>
             <input placeholder="Name" type="text" class="form-control" id="categoryName">
             <br />
-            <label for="description">Description:</label>
+            <label for="description" style="font-family: serif;">Description:</label>
             <input placeholder="Description" type="text" class="form-control" id="categoryDescription">
             <br />
-            <button type="submit" class="btn btn-success submit">Submit</button>
+            <button type="submit" class="btn btn-success submit" style="font-family: serif;">Submit</button>
             <span id="categoryStatus"></span>
           </div>
         </form>
-        <h2>Add a Product</h2>
+        <br>
+        <br>
+        <h2 style="font-family: serif; font-weight: bold;">Add a Product</h2>
         <form id="product">
           <div class="form-group">
-            <label for="name">Name:</label>
+            <label for="name" style="font-family: serif;">Name:</label>
             <input placeholder="Name" type="text" class="form-control" id="productName">
             <br />
-            <label for="description">Description:</label>
+            <label for="description" style="font-family: serif;">Description:</label>
             <input placeholder="Description" type="text" class="form-control" id="productDescription">
             <br />
-            <label for="price">Price:</label>
+            <label for="price" style="font-family: serif;">Price:</label>
             <input placeholder="Price" type="text" class="form-control" id="productPrice">
             <br />
-            <label for="productPhotoUrl">Photo URL:</label>
+            <label for="productPhotoUrl" style="font-family: serif;">Photo URL:</label>
             <input placeholder="Photo URL" type="text" class="form-control" id="productPhotoUrl">
             <br />
             <div class="form-group">
-              <label for="productCategoryID">Select Category:</label>
+              <label for="productCategoryID" style="font-family: serif;">Select Category:</label>
               <select class="custom-select" id="productCategoryID">
               </select>
             </div>
-            <button type="submit" class="btn btn-success submit">Submit</button>
+            <button type="submit" class="btn btn-success submit" style="font-family: serif;">Submit</button>
             <span id="productStatus"></span>
           </div>
         </form>
       </div>
     </div>
+    
   </div>
   <!-- Custom Script -->
   <script src="js/admin.js" type="text/javascript"></script>
-
+<br>
+<br>
 </body>
 
 </html>
