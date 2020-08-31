@@ -14,7 +14,7 @@
   padding: 45px;
   text-align: center;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-  opacity: 0.95;
+  opacity: 0.80;
 }
 .form input {
   font-family: "Roboto", sans-serif;
@@ -90,7 +90,7 @@
   color: #EF3B3A;
 }
 body.login {
-  background-image: url(../img/login-page.jpg);
+  background-image: url(../img/login.jpg);
   height: 100%;
   background-position: center center;
   background-repeat: no-repeat;
@@ -566,6 +566,11 @@ h2{
 
 }
 
+/* admin-page-style */
+
+body .admin{
+  background-color:red;
+}
 
 
 
