@@ -9,7 +9,7 @@ module.exports = function(app) {
   app.get("/", (req, res) => {
     // If the user already has an account send them to the members page
     if (req.user) {
-      res.redirect("/members");
+      res.redirect("/products");
     }
     res.sendFile(path.join(__dirname, "../public/login.html"));
   });
@@ -28,10 +28,12 @@ module.exports = function(app) {
 
   app.get("/products", (req, res) => {
     db.Product.findAll({
-      raw: true,
+      // raw: true,
       include: db.Category
     }).then(products => {
-      res.render("products", { products: products });
+      res.render("products", {
+        products: JSON.parse(JSON.stringify(products))
+      });
     });
   });
 
@@ -48,7 +50,8 @@ module.exports = function(app) {
 
   // Here we've add our isAuthenticated middleware to this route.
   // If a user who is not logged in tries to access this route they will be redirected to the signup page
-  app.get("/members", isAuthenticated, (req, res) => {
-    res.sendFile(path.join(__dirname, "../public/members.html"));
+  app.get("/products", isAuthenticated, (req, res) => {
+    // res.sendFile(path.join(__dirname, "../public/products.html"));
+    res.redirect("/products");
   });
 };
