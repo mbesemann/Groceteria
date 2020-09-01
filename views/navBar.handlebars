@@ -97,7 +97,53 @@
   <!--MAIN BODY-->
       <main>
           <div class="container">
-                {{{ body }}}
+                <br>
+<div class="products-layout">
+<br>
+<!-- partial:index.partial.html -->
+{{#each products}}
+<section class="product">
+	<div class="product__photo">
+		<div class="photo-container">
+			<div class="photo-main">
+				<div class="controls">
+					<i class="material-icons">share</i>
+					<i class="material-icons">favorite_border</i>
+				</div>
+				<img src="{{photoUrl}}" alt="{{name}}">
+			</div>
+			
+		</div>
+	</div>
+	<div class="product__info">
+		<div class="title">
+			<h1>{{name}}</h1>
+			</div>
+		<div class="price">
+			CAD$ <span>{{price}}</span>
+		</div>
+	
+		<div class="description">
+			<h3>BENEFITS</h3>
+			<ul>
+				<li>{{name}} are nutricious</li>
+				<li>{{name}} may be good for weight loss</li>
+				<li>{{name}} may be good for bone health</li>
+				<li>They're linked to a lowest risk of diabetes</li>
+			</ul>
+		</div>
+		<div class="cart">
+      {{!-- <a href="#"> --}}
+    <button data-id="{{id}}" class="buy--btn">ADD TO CART</button>
+  {{!-- </a> --}}
+</div>
+	</div>
+</section>
+<br>
+ {{/each}}
+<br>
+
+<!--END PRODUCTS LAYOUT-->
             </div>
 			
 		</main>

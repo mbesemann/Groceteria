@@ -5,9 +5,10 @@ const productsData = data.products;
 
 //PRODUCT SEARCH BY ID
 router.get("/id/:id", (req, res) => {
-  productsData.getProductById(req.params.id).then(productInfo => {
-      
-    if (productInfo != null) {
+  productsData
+    .getProductById(req.params.id)
+    .then(productInfo => {
+      if (productInfo !== null) {
         res.send(productInfo);
 
         /* res.render('product/product-info', {
@@ -26,7 +27,7 @@ router.get("/id/:id", (req, res) => {
       }
     })
     // eslint-disable-next-line no-unused-vars
-    .catch((error => {
+    .catch(error => {
       res.render("alerts/error", {
         mainTitle: "Page Not Found •",
         code: 404,
@@ -34,5 +35,5 @@ router.get("/id/:id", (req, res) => {
         url: req.originalUrl,
         user: req.user
       });
-    })
+    });
 });

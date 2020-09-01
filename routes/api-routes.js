@@ -91,7 +91,18 @@ module.exports = function(app) {
     });
   });
 
-  // app.put("/api/cart", (req, res) => {
-  //   db.Cart
-  // })
+  app.put("/api/cart", (req, res) => {
+    db.Cart.findOne({
+      where: { UserID: req.user.id }
+    }).then(cart => {
+      console.log(req.body);
+      db.CartItem.create({
+        CartId: cart.dataValues.id,
+        ProductId: req.body.productId,
+        quantity: 1
+      }).then(result => {
+        res.json(result);
+      });
+    });
+  });
 };
