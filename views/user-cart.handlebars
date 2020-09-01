@@ -10,8 +10,8 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	
-<link rel="stylesheet" href="./user-cart.css">
-<script src="./user-cart.js"></script>
+<link rel="stylesheet" href="/stylesheets/user-cart.css">
+<script src="/js/user-cart.js"></script>
 
 
 <article class="dashboard cart">
@@ -42,7 +42,7 @@
 					</div>
 
 					<div id="saved-cart-list"> 
-						{{#if user.cart}}
+						{{#if cart}}
 							<div class="row b-margin cart-show carts">
 									<div class="col-md-3"></div>
 									<div class="col-md-3">Description</div>
@@ -50,24 +50,24 @@
 									<div class="col-md-1">Qty</div>
 									<div class="col-md-2">Total</div>
 								</div>
-							{{#each user.cart}}
+							{{#each cart}}
 								<div class="row b-margin cart-show carts">
 									<div class="col-md-3">
-										<img src="{{image}}" alt="{{title}}" height="100" width="120" />
+										<img src="{{Product.photoUrl}}" alt="{{Product.name}}" height="100" width="120" />
 									</div>
 
 									<div class="col-md-3">
-										<h3>{{title}}</h3>									
+										<h3>{{Product.name}}</h3>									
 										{{size}}											
 									</div>
 
 									<div class="col-md-2">
 										<i class="fa fa-dollar"></i>
-										{{price}}
+										{{Product.price}}
 									</div>
 
 									<div class="col-md-1">
-										<input id="quantity-{{_id}}" type="text" onblur="updateQty('{{_id}}')" class="form-control" onfocus="saveQty('{{_id}}')" onkeypress="return event.charCode >= 48 && event.charCode <= 57" value="{{qty}}" maxlength="1" />
+										<input id="quantity-{{_id}}" type="text" onblur="updateQty('{{_id}}')" class="form-control" onfocus="saveQty('{{_id}}')" onkeypress="return event.charCode >= 48 && event.charCode <= 57" value="{{count}}" maxlength="1" />
 									</div>
 
 									<div class="col-md-2">

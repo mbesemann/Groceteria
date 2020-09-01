@@ -4,6 +4,7 @@ const db = require("../models");
 
 // Requiring our custom middleware for checking if a user is logged in
 const isAuthenticated = require("../config/middleware/isAuthenticated");
+const { sequelize } = require("../models");
 
 module.exports = function(app) {
   app.get("/", (req, res) => {
@@ -22,11 +23,11 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/login.html"));
   });
 
-  app.get("/admin", (req, res) => {
+  app.get("/admin", isAuthenticated, (req, res) => {
     res.sendFile(path.join(__dirname, "../public/admin.html"));
   });
 
-  app.get("/products", (req, res) => {
+  app.get("/products", isAuthenticated, (req, res) => {
     db.Product.findAll({
       // raw: true,
       include: db.Category
@@ -37,7 +38,7 @@ module.exports = function(app) {
     });
   });
 
-  app.get("/products/:category", (req, res) => {
+  app.get("/products/:category", isAuthenticated, (req, res) => {
     db.Product.findAll({
       //raw: true,
       include: { model: db.Category, where: { name: req.params.category } }
@@ -48,10 +49,38 @@ module.exports = function(app) {
     });
   });
 
+  app.get(
+    "/cart",
+    /*isAuthenticated,*/ (req, res) => {
+      db.Cart.findOne({
+        where: { UserID: 2 /*req.user.id*/ }
+      }).then(cart => {
+        db.CartItem.findAll({
+          where: { CartId: cart.id },
+          include: { model: db.Product },
+          attributes: [
+            // "Product.name",
+            // "Product.id",
+            [sequelize.fn("count", sequelize.col("Product.id")), "count"]
+          ],
+          group: "Product.id"
+        }).then(cartItems => {
+          res.render("user-cart", {
+            cart: JSON.parse(JSON.stringify(cartItems))
+          });
+        });
+      });
+    }
+  );
+
+  app.get("/navbar", (req, res) => {
+    res.render("navBar");
+  });
+
   // Here we've add our isAuthenticated middleware to this route.
   // If a user who is not logged in tries to access this route they will be redirected to the signup page
-  app.get("/products", isAuthenticated, (req, res) => {
-    // res.sendFile(path.join(__dirname, "../public/products.html"));
-    res.redirect("/products");
-  });
+  // app.get("/products", isAuthenticated, (req, res) => {
+  //   // res.sendFile(path.join(__dirname, "../public/products.html"));
+  //   res.redirect("/products");
+  // });
 };
