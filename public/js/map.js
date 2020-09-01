@@ -9,9 +9,10 @@ const initMap = () => {
     center: [-75.610474, 45.433556],
     zoom: 12.5
   });
-  const popup = new mapboxgl.Popup()
-    .setHTML(`<h2>Groceteria Store</h2><p>1980 Ogilvie Rd, Gloucester, ON K1J 9L3
-</p>`);
+  const popup = new mapboxgl.Popup().setHTML(`<i class="fas fa-store-alt"></i>
+    <h2 style="font-size:18px">Groceteria Store</h2>
+    <h5 style="font-size:12px">1980 Ogilvie Rd, Gloucester, ON K1J 9L3
+</h5>`);
 
   // eslint-disable-next-line no-unused-vars
   const marker = new mapboxgl.Marker()
