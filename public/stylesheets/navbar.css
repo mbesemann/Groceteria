@@ -5,14 +5,9 @@ html { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
 a { color: #408a00; }
 a h2.head:hover { cursor: pointer;text-decoration: underline; }
 
-/* error pop-ups */
-.error { color: #a94442; }
-.success { color: #3c763d; }
-.alert i:hover { cursor: pointer; }
-.hidden { visibility: hidden; }
-.show { visibility: visible; }
 
-/* jqueryui */
+
+/* JQUERY */
 .ui-state-active, 
 .ui-widget-content .ui-state-active, 
 .ui-widget-header .ui-state-active, 
@@ -28,7 +23,7 @@ header { background-color: #408A00;display: block;min-height: 50px; }
 header a { color: #fff;font-size: 1.5rem;letter-spacing: 1px;padding: 20px 0; }
 header i.fa { font-size: 1.8rem;margin-right: 1rem }
 
-/* navbar */
+/* NAVBAR */
 .navbar-default { background-color: #408A00; }
 .navbar-default .navbar-brand { background-color: #408A00;color: #fff; }
 .navbar-default .navbar-brand:hover { background-color: #eee;color: #408A00; }
