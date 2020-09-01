@@ -9,7 +9,7 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false
     },
     price: {
-      type: DataTypes.DECIMAL(5,2),
+      type: DataTypes.DECIMAL(5, 2),
       allowNull: false
     },
     // formattedPrice: {
