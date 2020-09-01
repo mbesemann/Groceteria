@@ -2,7 +2,7 @@
 @import url(https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700);
 
 html { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-a { color: #408a00; }
+a { color: #233502; }
 a h2.head:hover { cursor: pointer;text-decoration: underline; }
 
 
@@ -12,21 +12,21 @@ a h2.head:hover { cursor: pointer;text-decoration: underline; }
 .ui-widget-content .ui-state-active, 
 .ui-widget-header .ui-state-active, 
 a.ui-button:active, .ui-button:active, 
-.ui-button.ui-state-active:hover { background-color: #408a00 !important; }
+.ui-button.ui-state-active:hover { background-color: #233502 !important; }
 
 .ui-icon-background, .ui-state-active .ui-icon-background {
 	border: #fff !important;
 }
 
 /* HEADER */
-header { background-color: #408A00;display: block;min-height: 50px; }
+header { background-color: #233502;display: block;min-height: 50px; }
 header a { color: #fff;font-size: 1.5rem;letter-spacing: 1px;padding: 20px 0; }
 header i.fa { font-size: 1.8rem;margin-right: 1rem }
 
 /* NAVBAR */
-.navbar-default { background-color: #408A00; }
-.navbar-default .navbar-brand { background-color: #408A00;color: #fff; }
-.navbar-default .navbar-brand:hover { background-color: #eee;color: #408A00; }
+.navbar-default { background-color: #233502; }
+.navbar-default .navbar-brand { background-color: #233502;color: #fff; }
+.navbar-default .navbar-brand:hover { background-color: #eee;color: #233502; }
 .navbar-default .navbar-toggle .icon-bar { background-color: #fff; }
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:active, .navbar-default .navbar-toggle:focus { background-color: #fff; }
 .navbar-default .navbar-toggle:hover .icon-bar, .navbar-default .navbar-toggle:active .icon-bar, .navbar-default .navbar-toggle:focus .icon-bar { background-color: #337ab7; }
