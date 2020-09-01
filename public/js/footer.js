@@ -16,7 +16,7 @@ $(document).ready(() => {
       desp.length
     ) {
       if (regex.test(email)) {
-        if (contact.length == 10) {
+        if (contact.length === 10) {
           const formData = {
             name: name,
             email: email,

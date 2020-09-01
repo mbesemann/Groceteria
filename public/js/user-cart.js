@@ -69,7 +69,7 @@ function deleteCartItem(prod) {
       $("#saved-cart-list").load(location.href + " #saved-cart-list");
       $("#cart-size").load(location.href + " #cart-size");
 
-      if (result.cartSize != 0) {
+      if (result.cartSize !== 0) {
         $("#total-cost").load(location.href + " #total-cost");
         $("#tax-cost").load(location.href + " #tax-cost");
         $("#net-cost").load(location.href + " #net-cost");

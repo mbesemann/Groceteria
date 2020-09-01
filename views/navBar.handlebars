@@ -2,17 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <link href="https://fonts.googleapis.com/css?family=Raleway:400,700,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
   <link href="https://api.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.css" rel="stylesheet" />
-<link rel="stylesheet" href="./stylesheets/navbar.css">
-<link rel="stylesheet" href="./stylesheets/style.css">
+<link rel="stylesheet" href="./stylesheets/header.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
@@ -98,7 +95,10 @@
 			</div>
 		</header>
   <!--MAIN BODY-->
-      <div class="products-layout">
+      <main>
+          <div class="container">
+                <br>
+<div class="products-layout">
 <br>
 <!-- partial:index.partial.html -->
 {{#each products}}
@@ -107,7 +107,7 @@
 		<div class="photo-container">
 			<div class="photo-main">
 				<div class="controls">
-				<i class="material-icons">share</i>
+					<i class="material-icons">share</i>
 					<i class="material-icons">favorite_border</i>
 				</div>
 				<img src="{{photoUrl}}" alt="{{name}}">
@@ -143,20 +143,23 @@
  {{/each}}
 <br>
 
-    <link rel="stylesheet" href="./stylesheets/footer.css">	
+<!--END PRODUCTS LAYOUT-->
+            </div>
+			
+		</main>
+
+    <link rel="stylesheet" href="/stylesheets/footer.css">	
 		<footer>
 			<div class="container">		
 				<div class="row">
-						</div>	
-        
+					
 					<!-- ABOUT US -->
 					<div class="col-md-3">
 						<div class="row"><h3>Groceteria Project</h3></div>
 						<div class="row">
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus doloremque fuga perspiciatis voluptatum. Corporis incidunt illum sit molestias 
                   optio facilis, eaque quis in quasi dolores provident voluptate!
-                  
-							<p><br><br><i class="far fa-copyright"></i> Donnie, Zahra, Mattias Groceteria</p>
+							<p><i class="fa fa-map-pin"></i>Donnie Zahra Mattias Groceteria</p>
 						</div>
 						
 					</div>
@@ -200,7 +203,6 @@
 											<div class="col-md-3" style="padding-left: 0;">
 												<input type="button" id="btn-send" class="btn btn-default btn-full" value="Send" />
 											</div>
-
 
 											<!-- MESSAGE SENT NOTIFICATION -->
 											<div class="col-md-9" style="padding-left: 0;">
@@ -263,12 +265,10 @@
 							</form>
 						</div>
 					</div>
-         
-          <div id="map"></div>
-         
 					<label for="subscribe-email"></label>					
-         
-				
+					
+
+				</div>		
 			</div>
 		</footer>
 		
@@ -279,7 +279,6 @@
 			}
 		</script>
 		<form method="post" action="/user/logout" id="form-logout"></form>
-		 
+		
     </body>
-<script src="./js/addToCart.js"></script>
-<script src="./js/map.js"></script>
+</html>
