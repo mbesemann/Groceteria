@@ -8,8 +8,8 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
   <link href="https://api.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.css" rel="stylesheet" />
-<link rel="stylesheet" href="./stylesheets/navbar.css">
-<link rel="stylesheet" href="./stylesheets/style.css">
+<link rel="stylesheet" href="/stylesheets/navbar.css">
+<link rel="stylesheet" href="/stylesheets/style.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
@@ -43,13 +43,15 @@
                 <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menu<span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                  <li><a href="/product/category/dairy">Fruits Products</a></li>
+                  <li><a href="/product/category/dairy">Shopping List</a></li>
                   <li role="separator" class="divider"></li>
-                  <li><a href="/product/category/frozen">Vegetables Foods</a></li>
+                  <li><a href="/products/category/fruit">Fruits Products</a></li>
                   <li role="separator" class="divider"></li>
-                  <li><a href="/product/category/bakery">Bakery Products</a></li>
+                  <li><a href="/products/category/vegetables">Vegetables Foods</a></li>
                   <li role="separator" class="divider"></li>
-                  <li><a href="/product/category/bakery">Dairy Products</a></li>
+                  <li><a href="/products/category/bakery">Bakery Products</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="/products/category/dairy">Dairy Products</a></li>
                 </ul>
                 </li>
               </ul>
@@ -144,7 +146,7 @@
  {{/each}}
 <br>
 
-    <link rel="stylesheet" href="./stylesheets/footer.css">	
+    <link rel="stylesheet" href="/stylesheets/footer.css">	
 		<footer>
 			<div class="container">		
 				<div class="row">
@@ -164,7 +166,7 @@
 
 					
 					<!-- CONTACT US -->
-					<script src="./js/contact-validation.js"></script>
+					<script src="/js/contact-validation.js"></script>
 					<div class="col-md-3 col-md-offset-1">
 						<div class="row"><h3>Contact Us</h3></div>
 						
@@ -240,7 +242,7 @@
 						</div>
 
 						<br/>
-						<script src="./js/footer.js"></script>
+						<script src="/js/footer.js"></script>
 						<div class="row"><h3>Subscribe</h3></div>
 						<div class="row">
 							<form method="post" id="form-subscribe">
@@ -281,6 +283,8 @@
 		</script>
 		<form method="post" action="/user/logout" id="form-logout"></form>
 		 
-    </body>
-<script src="./js/addToCart.js"></script>
-<script src="./js/map.js"></script>
+   
+<script src="/js/addToCart.js"></script>
+<script src="/js/map.js"></script>
+ </body>
+</html>
