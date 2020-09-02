@@ -105,4 +105,13 @@ module.exports = function(app) {
       });
     });
   });
+
+  app.delete("/api/cart", (req, res) => {
+    console.log(req.body.id);
+    db.CartItem.destroy({
+      where: { id: req.body.id }
+    }).then(result => {
+      res.json(result);
+    });
+  });
 };
