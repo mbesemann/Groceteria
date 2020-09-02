@@ -59,10 +59,12 @@ function deleteCartItem(prod) {
     id: prod
   };
 
+  console.log(prod);
+
   $.ajax({
-    url: "/user/update/cart",
+    url: "/api/cart",
     type: "DELETE",
-    dataType: "json",
+    // dataType: "json",
     data: JSON.stringify(data),
     success: function(result) {
       $("#success-cart-list").removeClass("hidden");

@@ -5,6 +5,7 @@ const db = require("../models");
 // Requiring our custom middleware for checking if a user is logged in
 const isAuthenticated = require("../config/middleware/isAuthenticated");
 const { sequelize } = require("../models");
+const { Op } = require("sequelize");
 
 module.exports = function(app) {
   app.get("/", (req, res) => {
@@ -38,10 +39,22 @@ module.exports = function(app) {
     });
   });
 
-  app.get("/products/:category", isAuthenticated, (req, res) => {
+  app.get("/products/category/:category", isAuthenticated, (req, res) => {
     db.Product.findAll({
       //raw: true,
       include: { model: db.Category, where: { name: req.params.category } }
+    }).then(products => {
+      res.render("products", {
+        products: JSON.parse(JSON.stringify(products))
+      });
+    });
+  });
+
+  app.get("/products/search/", isAuthenticated, (req, res) => {
+    db.Product.findAll({
+      //raw: true,
+      // include: db.Category,
+      where: { name: { [Op.like]: `%${req.query.keyword}%` } }
     }).then(products => {
       res.render("products", {
         products: JSON.parse(JSON.stringify(products))
@@ -61,9 +74,10 @@ module.exports = function(app) {
           attributes: [
             // "Product.name",
             // "Product.id",
+            "id",
             [sequelize.fn("count", sequelize.col("Product.id")), "count"]
           ],
-          group: "Product.id"
+          group: ["Product.id", "CartItem.id"]
         }).then(cartItems => {
           res.render("user-cart", {
             cart: JSON.parse(JSON.stringify(cartItems))
