@@ -4,9 +4,7 @@
 html { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
 a { color: #233502; }
 a h2.head:hover { cursor: pointer;text-decoration: underline; }
-.store-alt	{
-	color: #fff;
-}
+
 
 
 /* JQUERY */
