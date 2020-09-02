@@ -26,7 +26,7 @@ $(document).ready(() => {
           };
 
           $.ajax({
-            url: "/support/contact-us/",
+            url: "/contact-us/",
             type: "POST",
             dataType: "json",
             data: JSON.stringify(formData),

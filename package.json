@@ -26,6 +26,7 @@
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
     "sequelize": "^6.3.4",
+    "validation": "0.0.1",
     "validator-js": "^0.2.1"
   },
   "devDependencies": {
