@@ -3,18 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <title>CodePen - Cool Grocery List</title>
-  <link rel="stylesheet" href="./stylesheets/shopping-list.css">
+  <link rel="stylesheet" href="./stylesheets/grocery-list.css">
 
 </head>
 <body>
 <!-- partial:index.partial.html -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 <link href='href="https://fonts.googleapis.com/css2?family=Cormorant:wght@700&display=swap' rel='stylesheet' type='text/css'>
+<div class="sidebar">
 <div id="container">
   <div id="page">
     <h1 id ="header">Grocery List</h1><span id="counter"></span>
     <ul id="sortable">
-      <li>fresh figs<span class="fa fa-pencil"></span><span class="fa fa-heart-o"></span><span class="fa fa-check"></span></li>
+      <li class="li-list">fresh figs<span class="fa fa-pencil"></span><span class="fa fa-heart-o"></span><span class="fa fa-check"></span></li>
       <li>pine nuts<span class="fa fa-pencil"></span><span class="fa fa-heart-o"></span><span class="fa fa-check"></span></li>
       <li>honey<span class="fa fa-pencil"></span><span class="fa fa-heart-o"></span><span class="fa fa-check"></span></li>
       <li>balsamic vinegar<span class="fa fa-pencil"></span><span class="fa fa-heart-o"></span><span class="fa fa-check"></span></li>
@@ -29,10 +30,11 @@
       <input type="submit" id="addbutton" value="add" />
    </div><!--.page-->
 </div><!--.container-->
+</div>
 <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 <!-- partial -->
-  <script  src="./js/shopping-list.js"></script>
+  <script  src="./js/grocery-list.js"></script>
 
 </body>
 </html>
