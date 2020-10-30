@@ -1,4 +1,5 @@
 // Requiring necessary npm packages
+const compression = require("compression");
 const express = require("express");
 const session = require("express-session");
 // Requiring passport as we've configured it
@@ -10,6 +11,17 @@ const db = require("./models");
 
 // Creating express app and configuring middleware needed for authentication
 const app = express();
+app.use(compression({ filter: shouldCompress }));
+
+function shouldCompress(req, res) {
+  if (req.headers["x-no-compression"]) {
+    // don't compress responses with this request header
+    return false;
+  }
+  // fallback to standard filter function
+  return compression.filter(req, res);
+}
+
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));

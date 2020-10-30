@@ -2,6 +2,8 @@
 
 A great grocery store app!
 
+![Screenshot](assets/screenshot.png)
+
 # Technologies Used
 Frontend Languages: HTML, CSS, and Client-Side JavaScript
 Frontend Framework: Bootstrap
